@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+function App(props) {
+  //Variables
+  const [userInput, setUserInput] = useState("");
+  //Functions
+
+  //Return
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input
+          type="text"
+          // value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+        />
+        <h1>{userInput}</h1>
       </header>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+//******CLASS COMPONENT********* */
+
+// import React, { Component } from 'react'
+// import logo from "./logo.svg";
+// import "./App.css";
+
+// export default class App extends Component {
+// //Variables
+// constructor() {
+//   super();
+//   this.state = {
+//     userInput: "",
+//   }
+// }
+// //Functions
+
+// //Return
+//   render() {
+//     return (
+//       <div>
+//          <input
+//           type="text"
+//           value={this.state.userInput}
+//           onChange={(event) => this.setUserInput(event.target.value)}
+//         />
+//         <span></span>
+//       </div>
+//     )
+//   }
+// }

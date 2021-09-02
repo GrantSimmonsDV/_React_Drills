@@ -1,23 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  //Variables
+  const [arr, setArr] = useState(["Hank", "Bank", "Drank", "Stank"]);
+  // Function
+  // setArr(){
+  //   let arr = arr;
+  //   let List = "";
+
+  //   List = arr.toString()
+  //   // for (let i = 0; i<arr.length; i++){
+  //   //   List += arr[i];
+  //   }
+  let display = arr.map((element, index) => {
+    return <h2 key={index}>{element}</h2>;
+  });
+  //Return
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <span onChange={() => setArr(display)}></span>
+        <h2>{arr}</h2>
       </header>
     </div>
   );
