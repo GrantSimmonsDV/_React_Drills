@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App(props) {
@@ -11,22 +10,30 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <input
-          type="text"
-          // value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-        />
+        <input type="text" onChange={(e) => setUserInput(e.target.value)} />
         <h1>{userInput}</h1>
       </header>
     </div>
   );
 }
 
+// }
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <input
+//           type="text"
+//           // value={userInput}
+//           onChange={(e) => setUserInput(e.target.value)}
+//         />
+//         <h1>{userInput}</h1>
+//       </header>
+//     </div>
+//   );
+// }
+
 export default App;
-
-
-
 
 //******CLASS COMPONENT********* */
 
