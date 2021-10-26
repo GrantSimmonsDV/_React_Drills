@@ -14,6 +14,7 @@ function App() {
   //   // for (let i = 0; i<arr.length; i++){
   //   //   List += arr[i];
   //   }
+  
   let display = arr.map((element, index) => {
     return <h2 key={index}>{element}</h2>;
   });
