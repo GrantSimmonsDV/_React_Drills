@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -21,11 +20,9 @@ function App() {
   //Return
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <span onChange={() => setArr(display)}></span>
-        <h2>{arr}</h2>
-      </header>
+    
+        <ul>{display}</ul>
+ 
     </div>
   );
 }
