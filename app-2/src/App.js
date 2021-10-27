@@ -15,7 +15,6 @@ function App() {
   //   //   List += arr[i];
   //   }
 
-  
   let display = arr.map((element, index) => {
     return <h2 key={index}>{element}</h2>;
   });
