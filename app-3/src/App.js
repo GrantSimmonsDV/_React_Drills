@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -11,16 +10,6 @@ function App() {
     "yogurt",
   ]);
   const [search, setSearch] = useState("");
-
-  // function handleChange(filter) {
-  //   setList({ list: filter });
-  // }
-
-  // let groceries = list.filter((element, index) => {
-  //   return element.includes(list);
-  // });
-
-  // let groceries = list;
 
   return (
     <div className="App">
@@ -34,10 +23,9 @@ function App() {
           }
         })
         .map((element, index) => {
-          return <h2 key={index}>{element}</h2>;
+          return <h2 key={index} >{element}</h2>;
         })}
 
-      {list}
     </div>
   );
 }
